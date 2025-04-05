@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <style>
+            /* Add your styles here */
+            #YesButton {
+                position: absolute;
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">what are we feeling</h1>
+                <h1 class = "header_text">do you feel sad and bad?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm5qZ3hhOTNneTE1cDF2bXV2MWZqMHQ0d2o1ZTExM21lemVleXBsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1AsyjZ8XLd1V7pUk/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "NoButton" onclick="nextPage()">NO</button>
+                <button class="btn" id="YesButton" onmouseover="moveButton()" onclick="moveButton()">Yes</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "No.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('YesButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('YesButton').offsetHeight) - 48;
+                        document.getElementById('YesButton').style.left = `${x}px`;
+                        document.getElementById('YesButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
